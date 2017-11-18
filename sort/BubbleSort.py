@@ -33,6 +33,17 @@ def bubbleSort_1(arr):
                 arr[j] = arr[j+1]
                 arr[j+1]=temp
     return arr
+
+def bubbleSort_2(arr):
+    if arr == None or len(arr)<2:
+        return arr
+    n = len(arr)
+    for i in range(n-1):
+        print '----'
+        for j in range(n-i-1):
+            print '(比较:%d-%d)' % (j, j + 1)
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
 if __name__ == '__main__':
     arr = [54,35,48,36,27,12,44,44,8,14,26,17,28]
     sortArr = bubbleSort_1(arr)
